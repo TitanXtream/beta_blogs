@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app_bg {
+    background: url("./assets/design-img/bg.jpg") fixed 20% 20%;
+  }
+  .f-r-between {
+    @apply flex flex-row justify-between items-center;
+  }
+  .f-c-between {
+    @apply flex flex-col justify-between;
+  }
+  .primary_btn {
+    @apply block sm:px-[30px] px-[25px] sm:py-[10px] py-[8px] sm:text-[20px] text-[14px] w-max rounded-[12px]  max-w-full text-center;
+    @apply bg-pink-500  text-[white] shadow-lg shadow-pink-500 cursor-pointer hover:bg-yellow-300 hover:text-pink-500 hover:shadow-yellow-300;
+  }
+
+  .nav_btn {
+    @apply hover:bg-yellow-300 font-bold px-[20px] py-[5px] rounded-lg bg-yellow-200 text-pink-500 shadow-xl h-max w-full text-center whitespace-nowrap;
+  }
+  .nav_btn.active {
+    @apply bg-pink-600 text-yellow-200;
+  }
+  .drop_nav {
+    @apply absolute right-[50%] h-[auto] top-[120%] flex-col w-[200px] p-[20px] rounded-lg bg-pink-400/50 shadow-xl shadow-slate-500 sm:translate-x-[50%] translate-x-[30%];
+  }
+
+  .overlay-blog {
+    @apply absolute top-0 h-full w-full bg-gradient-to-b from-transparent to-white;
+  }
+
+  .authform_input_bar {
+    @apply bg-transparent px-[10px] py-[5px] outline-none border-b-[1px] border-slate-700 focus:bg-yellow-200 border-0 text-pink-500 font-semibold rounded-lg;
+  }
+
+  .downloader {
+    @apply bg-slate-800 flex flex-row hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-500 sm:w-[230px] w-[180px] sm:min-h-[60px] min-h-[45px] rounded-[5px] px-[5px] py-[2px] text-white gap-[10px] cursor-pointer;
+  }
+  .downloader .logo {
+    @apply flex justify-center items-center h-full sm:text-[45px] text-[35px];
+  }
+  .downloader .text_zone {
+    @apply h-full flex flex-col pr-[10px];
+  }
+  .downloader .text_zone .small_text {
+    @apply sm:text-[12px] text-[10px] font-thin;
+  }
+  .downloader .text_zone .large_text {
+    @apply sm:text-[28px] text-[20px] font-medium leading-[100%] whitespace-nowrap;
+  }
+
+  .form_error {
+    @apply text-red-500 text-[12px] xs:text-[16px];
+  }
+}
