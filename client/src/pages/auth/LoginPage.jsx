@@ -12,7 +12,11 @@ const LoginPage = () => {
   const handleLogin = async (user) => {
     const resp = dispatch(login(user))
       .then(() => navigate("/"))
-      .catch(() => {});
+      .catch(() =>
+        toast.promise(resp, {
+          error: "No such user exist",
+        })
+      );
 
     toast.promise(resp, {
       pending: "Login in",

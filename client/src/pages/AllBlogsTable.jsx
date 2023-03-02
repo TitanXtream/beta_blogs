@@ -36,7 +36,7 @@ const AllBlogsTable = ({ user, type }) => {
       viewport={{ once: false, amount: 0.25 }}
       className="h-auto w-full flex flex-row flex-wrap justify-center md:p-[50px] sm:p-[35px] p-[20px] sm:gap-[80px] gap-[30px]"
     >
-      {blogs.length > 0 ? (
+      {AllBlogs?.length > 0 ? (
         blogs?.map((blog, i) => {
           let blogType = "ME";
           if (type === "ALL") {

@@ -10,13 +10,12 @@ const SigninPage = () => {
   const navigate = useNavigate();
 
   const hangleRegistration = async (user) => {
-    try {
-      const data = await dispatch(register(user))
-        .then(() => navigate("/login"))
-        .catch(() => {});
-    } catch (err) {
-      toast.error("Something went wrong ,Sign in Failed !!!");
-    }
+    const data = await dispatch(register(user))
+      .then(() => navigate("/login"))
+      .catch(() => toast.error("Something went wrong ,Sign in Failed !!!"));
+    toast.promise(data, {
+      pending: "Signing in",
+    });
   };
 
   return <AuthForm type="SIGNUP" authFunction={hangleRegistration} />;

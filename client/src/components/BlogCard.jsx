@@ -4,12 +4,16 @@ import { RiEditLine } from "react-icons/ri";
 import { AiOutlineDelete, AiFillLike } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { deleteBlog, likeBlog } from "../actions";
+import { toast } from "react-toastify";
 
 const BlogCard = ({ blog, type }) => {
   const dispatch = useDispatch();
 
   const handleBlogDeletinging = async () => {
-    dispatch(deleteBlog(blog._id));
+    const resp = dispatch(deleteBlog(blog._id));
+    toast.promise(resp, {
+      pending: "Deleting blog",
+    });
   };
 
   const handleBlogLiking = () => {

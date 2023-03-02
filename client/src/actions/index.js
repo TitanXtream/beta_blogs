@@ -97,7 +97,7 @@ export const logout = (user) => async (dispatch) => {
     await dispatch(authAction.clearUser());
 
     Cookie.remove("blogger");
-    // toast.success((await resp).data.message);
+
     toast.success(resp?.data?.message);
   } catch (err) {
     // console.error(`<><><>--${err?.response?.data?.message}--<><><>`);
