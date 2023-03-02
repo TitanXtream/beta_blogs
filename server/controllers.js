@@ -206,4 +206,4 @@ export const logoutUser = async (req, res) => {
 ///::::::::::::::::::> Auth-END <:::::::::::::::::://///
 
 export default router;
-//$2a$10$jZRUF5g.zIt3MHGzfD3Ttu2XX5zVk.PabF/zr4Gps6aauavNt6D6O
+
